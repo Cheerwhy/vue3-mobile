@@ -8,12 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nprogress": "^0.2.0",
     "vant": "^3.4.5",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@types/node": "^17.0.18",
+    "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^2.2.0",
     "autoprefixer": "^10.4.2",
     "postcss-px-to-viewport": "^1.1.1",
