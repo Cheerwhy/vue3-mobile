@@ -30,6 +30,7 @@ const back = () => {
   justify-content: center;
   align-items: center;
   & .back-icon {
+    color: var(--van-gray-6);
     font-size: 25px;
     position: absolute;
     left: 5px;

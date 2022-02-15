@@ -1,7 +1,8 @@
-html,body {
+html,
+body {
   margin: 0;
   height: 100%;
-  background-color: var(--van-gray-1);  
+  background-color: var(--van-gray-1);
 }
 
 * {
@@ -24,16 +25,14 @@ h5 {
 }
 
 .slide-right-enter-active,
-.slide-left-enter-active,
-.slide-right-leave-active,
-.slide-left-leave-active {
-  transition: all 0.36s;
+.slide-right-leave-active {
+  transition: transform 0.3s;
   position: absolute;
 }
-
 .slide-left-enter-active,
-.slide-right-leave-active {
-  border-left: 1px solid #e1e1e1;
+.slide-left-leave-active {
+  transition: transform 0.36s;
+  position: absolute;
 }
 
 .slide-right-enter-from {
