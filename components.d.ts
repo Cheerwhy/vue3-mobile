@@ -4,7 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    PageHeader: typeof import('./src/components/PageHeader.vue')['default']
+    VanCell: typeof import('vant/es')['Cell']
+    VanDivider: typeof import('vant/es')['Divider']
     VanField: typeof import('vant/es')['Field']
+    VanIcon: typeof import('vant/es')['Icon']
   }
 }
 
