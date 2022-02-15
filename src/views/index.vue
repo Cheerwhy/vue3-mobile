@@ -15,25 +15,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="page-container">
-    <header class="header">
-      <h1>Header</h1>
-    </header>
+  <section class="main">
+    <header class="header">Header</header>
     <section class="body">
-      <van-divider :style="{ color: 'var(--van-blue)', borderColor: 'var(--van-blue)' }"
-        >点击输入框测试粘性布局</van-divider
-      >
       <van-field id="sb" v-model="value" label="文本" placeholder="请输入一些内容" />
       <van-cell title="跳转" is-link @click="jump" />
     </section>
-    <footer class="footer">
-      <h1>Footer</h1>
-    </footer>
+    <footer class="footer">Footer</footer>
   </section>
 </template>
 
 <style lang="scss" scoped>
-.page-container {
+.main {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -50,7 +43,7 @@ onMounted(() => {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   display: flex;
-  z-index: 100;
+  z-index: 10;
   justify-content: center;
   align-items: center;
 }
