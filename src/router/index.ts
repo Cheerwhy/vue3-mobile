@@ -15,6 +15,13 @@ export const routes: RouteRecordRaw[] = [
       transition: '',
     },
   },
+  {
+    path: '/detail/detail2',
+    component: () => import('@/views/detail2.vue'),
+    meta: {
+      transition: '',
+    },
+  },
 ];
 
 const router = createRouter({
@@ -25,7 +32,7 @@ const router = createRouter({
 router.beforeEach((to, from) => {
   const toDepth = to.path.split('/').filter((ele) => !!ele).length;
   const fromDepth = from.path.split('/').filter((ele) => !!ele).length;
-  to.meta.transition = toDepth < fromDepth ? 'slide-right' : 'slide-left';
+  to.meta.transition = toDepth > fromDepth ? 'slide-left' : 'slide-right';
 });
 
 router.afterEach(() => {

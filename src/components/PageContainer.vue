@@ -1,13 +1,14 @@
 <template>
-  <section class="page-container">
+  <div class="page-container">
     <slot />
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .page-container {
   width: 100vw;
   height: 100%;
-  background-color: #f5f5f5;
+  overflow-x: hidden;
+  background-color: var(--van-gray-1);
 }
 </style>
