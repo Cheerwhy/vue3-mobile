@@ -32,6 +32,7 @@ export default defineConfig({
   ],
   build: {
     outDir: 'docs',
+    cssTarget: 'chrome61', // 防止vite将css中的rgba转化为十六进制
     terserOptions: {
       compress: {
         drop_console: true,
