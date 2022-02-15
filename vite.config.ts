@@ -7,7 +7,7 @@ import { VantResolver } from 'unplugin-vue-components/resolvers';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vue3-mobile',
+  base: './',
   server: {
     port: 3000,
     host: '0.0.0.0',
@@ -31,7 +31,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    outDir: 'vue3-mobile',
+    outDir: 'docs',
     terserOptions: {
       compress: {
         drop_console: true,
