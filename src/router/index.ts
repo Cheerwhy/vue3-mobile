@@ -1,23 +1,26 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import Index from '@/views/index.vue';
+import Detail from '@/views/detail.vue';
+import Detail2 from '@/views/detail2.vue';
 
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('@/views/index.vue'),
+    component: Index,
     meta: {
       transition: '',
     },
   },
   {
     path: '/detail',
-    component: () => import('@/views/detail.vue'),
+    component: Detail,
     meta: {
       transition: '',
     },
   },
   {
     path: '/detail/detail2',
-    component: () => import('@/views/detail2.vue'),
+    component: Detail2,
     meta: {
       transition: '',
     },
@@ -35,7 +38,6 @@ router.beforeEach((to, from) => {
   to.meta.transition = toDepth > fromDepth ? 'slide-left' : 'slide-right';
 });
 
-router.afterEach(() => {
-});
+router.afterEach(() => {});
 
 export default router;
