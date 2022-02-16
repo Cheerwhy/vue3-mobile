@@ -4,8 +4,9 @@ import { useRouter } from 'vue-router';
 interface pageHeaderProps {
   title?: string;
 }
+
 withDefaults(defineProps<pageHeaderProps>(), {
-  title: '',
+  title: '标题',
 });
 
 const router = useRouter();

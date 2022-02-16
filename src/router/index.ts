@@ -1,6 +1,4 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import nprogress from 'nprogress';
-import 'nprogress/nprogress.css';
 import Index from '@/views/index.vue';
 import Detail from '@/views/detail.vue';
 import Detail2 from '@/views/detail2.vue';
@@ -35,14 +33,12 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  nprogress.start();
-  const toDepth = to.path.split('/').filter((ele) => !!ele).length;
-  const fromDepth = from.path.split('/').filter((ele) => !!ele).length;
+  const toDepth = to.path.split('/').filter((ele) => !!ele).length; // 目标路由路径深度
+  const fromDepth = from.path.split('/').filter((ele) => !!ele).length; // 来源路由路径深度
+  // 根据深度的不同切换路由动画
   to.meta.transition = toDepth > fromDepth ? 'slide-left' : 'slide-right';
 });
 
-router.afterEach(() => {
-  nprogress.done();
-});
+router.afterEach(() => {});
 
 export default router;

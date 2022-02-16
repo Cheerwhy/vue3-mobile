@@ -1,3 +1,5 @@
+@import './transition.scss';
+
 html,
 body {
   margin: 0;
@@ -14,39 +16,4 @@ body {
   height: 100%;
   position: relative;
   overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-}
-
-.slide-right-enter-active,
-.slide-right-leave-active {
-  transition: transform 0.3s;
-  position: absolute;
-}
-.slide-left-enter-active,
-.slide-left-leave-active {
-  transition: transform 0.36s;
-  position: absolute;
-}
-
-.slide-right-enter-from {
-  transform: translateX(-100%);
-}
-
-.slide-right-leave-to {
-  transform: translateX(100%);
-}
-
-.slide-left-enter-from {
-  transform: translateX(100%);
-}
-
-.slide-left-leave-to {
-  transform: translateX(-30%);
 }
