@@ -1,4 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import nprogress from 'nprogress';
+import 'nprogress/nprogress.css';
 import Index from '@/views/index.vue';
 import Detail from '@/views/detail.vue';
 import Detail2 from '@/views/detail2.vue';
@@ -33,11 +35,14 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
+  nprogress.start();
   const toDepth = to.path.split('/').filter((ele) => !!ele).length;
   const fromDepth = from.path.split('/').filter((ele) => !!ele).length;
   to.meta.transition = toDepth > fromDepth ? 'slide-left' : 'slide-right';
 });
 
-router.afterEach(() => {});
+router.afterEach(() => {
+  nprogress.done();
+});
 
 export default router;
